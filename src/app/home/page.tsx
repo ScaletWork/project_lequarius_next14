@@ -1,3 +1,4 @@
+import VideoBlock from "@/components/pages/Main/VideoBlock";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,8 +7,8 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="main-page">
+      <VideoBlock />
     </div>
   );
 };

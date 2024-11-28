@@ -5,8 +5,8 @@
   $minValue,
   $maxValue,
   $symbol: plus,
-  $minWidth: 375,
-  $maxWidth: 1440
+  $minWidth: 320,
+  $maxWidth: 1920
 ) {
   @if $symbol == plus {
     @return calc(

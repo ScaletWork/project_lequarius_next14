@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 15px res(15, 110) 4px;
+  background: linear-gradient(90deg, #6564ee, #3b2bc2);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  a {
+    font-size: res(14, 22);
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+
+  &__hamburger,
+  &__hamburger-rock {
+    display: none;
+    flex-direction: column;
+    width: 20px;
+    gap: 4px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    span {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &.active {
+      span {
+        height: 3px;
+
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+          width: 20px;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    ul {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px 40px;
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+
+    &__hamburger {
+      display: flex;
+    }
+
+    &__hamburger-rock {
+      &.active {
+        display: flex;
+
+        span {
+          background: transparent;
+        }
+      }
+    }
+
+    &.active {
+      nav {
+        transform: translateX(0);
+      }
+
+      .header__hamburger {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 5;
+      }
+    }
+
+    nav {
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+      transform: translateX(100%);
+      background: rgb(29, 29, 37);
+      overflow: hidden;
+      padding: 20px 40px;
+      background-color: #5332c7;
+    }
+
+    ul {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        height: 40px;
+        width: 100%;
+        border: 1px solid #fff;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

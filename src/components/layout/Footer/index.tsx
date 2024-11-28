@@ -1,7 +1,8 @@
+import ContactBlock from "@/components/pages/Main/ContactBlock";
 import { FC } from "react";
 
 const Footer: FC = () => {
-  return <div>Footer</div>;
+  return <ContactBlock />;
 };
 
 export default Footer;
