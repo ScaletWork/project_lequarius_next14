@@ -1,0 +1,90 @@
+.coming-soon {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  &__video {
+    width: 1200px;
+    height: 1200px;
+    top: 35px;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-family: var(--font-interphases);
+    font-size: res(36, 80);
+    font-weight: 500;
+    letter-spacing: -4px;
+    color: #ffffff;
+    text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff, 0 0 12px #ffffff,
+      0 0 24px #ffffff, 0 0 48px #ffffff;
+    animation: neonGlow 2s infinite alternate;
+  }
+
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff, 0 0 12px #ffffff,
+        0 0 24px #ffffff, 0 0 48px #ffffff;
+    }
+    100% {
+      text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff, 0 0 18px #ffffff,
+        0 0 30px #ffffff, 0 0 60px #ffffff;
+    }
+  }
+
+  h2 {
+    font-family: var(--font-interphases);
+    margin-top: 26px;
+    font-weight: 400;
+    font-size: res(24, 34);
+    letter-spacing: -1.4px;
+    color: #7d50be;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: -20px;
+      font-size: res(18, 29);
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    padding: 40px res(15, 40);
+    max-width: res(-100, 1000);
+  }
+
+  @include tablet {
+    &__text {
+      max-width: initial;
+    }
+
+    &__video {
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+    }
+  }
+
+  @include mobile {
+    &__video {
+      top: 300px;
+      width: 600px;
+      height: 600px;
+    }
+  }
+}

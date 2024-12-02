@@ -17,6 +17,11 @@
     font-size: res(14, 22);
     letter-spacing: 4px;
     font-weight: 600;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #d73cbe;
+    }
   }
 
   &__hamburger,

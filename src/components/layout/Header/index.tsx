@@ -50,11 +50,7 @@ const Header: FC = () => {
         <ul>
           {menuItems.map((item, i) => (
             <li key={i}>
-              <Link
-                className="hoverUnderlineAnimation"
-                href={item.href}
-                onClick={onMenuClick}
-              >
+              <Link href={item.href} onClick={onMenuClick}>
                 {item.name}
               </Link>
             </li>

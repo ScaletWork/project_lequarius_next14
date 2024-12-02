@@ -1,2 +1,14 @@
-.input-action {
+.form-input-wrapper {
+  display: flex;
+  gap: 20px;
+
+  .form-group {
+    flex: 1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

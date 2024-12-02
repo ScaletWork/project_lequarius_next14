@@ -1,0 +1,126 @@
+.contact-form-btn {
+  position: relative;
+  z-index: 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  &__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: #d73cbe;
+    height: 100%;
+  }
+
+  &__btn {
+    font-family: var(--font-interphases);
+    text-transform: uppercase;
+    font-size: res(18, 38);
+    padding: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: #d73cbe;
+  }
+
+  &__stars {
+    position: absolute;
+    right: 77px;
+    top: 2px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__form {
+    position: absolute;
+    background-color: #6e2af5;
+    padding: 32px;
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 0;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: res(32, 52);
+      font-weight: 700;
+      text-align: center;
+      font-family: var(--font-interphases);
+      letter-spacing: 3px;
+
+      span {
+        color: #01cabd;
+      }
+    }
+
+    label {
+      font-family: var(--font-interphases);
+      font-size: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: var(--font-interphases);
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        border-color: #c55101;
+        box-shadow: 0 0 8px rgba(197, 81, 1, 0.5);
+      }
+    }
+
+    textarea {
+      resize: none;
+      border-radius: 20px;
+    }
+
+    button {
+      font-family: var(--font-interphases);
+      background-color: #d73cbe;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      margin-top: 31px;
+      max-width: 171px;
+      border-radius: 30px;
+      font-size: 17px;
+      padding: 12px;
+
+      &:hover {
+        background-color: #b52ba0;
+      }
+    }
+  }
+
+  @include mobile {
+    &__circle {
+      padding: 10px;
+    }
+
+    &__btn {
+      font-size: 18px;
+    }
+  }
+}

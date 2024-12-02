@@ -27,11 +27,12 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-size: 16px;
-  font-family: var(--font-indieflower), sans-serif;
+  font-family: var(--font-lastica), sans-serif;
   line-height: 1;
   font-weight: 400;
   color: white;
   background-color: #5332c7;
+  // background-color: #350b5d;
 }
 
 body,
@@ -75,7 +76,7 @@ a {
 button {
   background-color: transparent;
   cursor: pointer;
-  font-family: var(--font-indieflower), sans-serif;
+  font-family: var(--font-lastica), sans-serif;
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
