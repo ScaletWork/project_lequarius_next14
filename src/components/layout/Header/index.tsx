@@ -56,6 +56,10 @@ const Header: FC = () => {
             </li>
           ))}
         </ul>
+        <div className="header__language">
+          <span className="active">ENG</span>
+          <span>PLN</span>
+        </div>
       </nav>
       <div
         className={`header__hamburger ${isOpen ? "active" : ""}`}

@@ -1,3 +1,5 @@
+import AboutUsMain from "@/components/pages/Main/AboutUs";
+import ServiceMain from "@/components/pages/Main/Service";
 import VideoBlock from "@/components/pages/Main/VideoBlock";
 import type { Metadata } from "next";
 
@@ -9,6 +11,8 @@ const Home = () => {
   return (
     <div className="main-page">
       <VideoBlock />
+      <AboutUsMain />
+      <ServiceMain />
     </div>
   );
 };

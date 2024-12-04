@@ -11,6 +11,7 @@ const VideoBlock: FC = () => {
 
   return (
     <section className="video-block">
+      <h1>LeQuarius</h1>
       {isVideo && (
         <video
           className="video-block__video"

@@ -1,11 +1,25 @@
 .video-block {
   width: 100%;
   height: 100vh;
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    bottom: 158px;
+    transform: translateX(-50%);
+    font-size: res(32, 60);
+    letter-spacing: 24px;
+  }
   video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-
     border: none;
+  }
+
+  @include mobile {
+    h1 {
+      letter-spacing: 8px;
+    }
   }
 }
