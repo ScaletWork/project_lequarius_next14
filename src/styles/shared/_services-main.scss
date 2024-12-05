@@ -1,5 +1,23 @@
 .service-main {
+  position: relative;
   padding: 57px 0;
+
+  .blur-circle {
+    &--4 {
+      top: 20%;
+      right: -100px;
+    }
+
+    &--5 {
+      top: 50%;
+      left: -100px;
+    }
+
+    &--6 {
+      bottom: 20%;
+      right: -100px;
+    }
+  }
 
   h2 {
     font-size: res(22, 46);

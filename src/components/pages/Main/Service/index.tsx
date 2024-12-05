@@ -5,6 +5,9 @@ import { FC } from "react";
 const ServiceMain: FC = () => {
   return (
     <section className="service-main">
+      <div className="blur-circle blur-circle--4" />
+      <div className="blur-circle blur-circle--5" />
+      <div className="blur-circle blur-circle--6" />
       <h2>Services We Provide</h2>
       <p>
         Our comprehensive suite of services is designed to bring your digital

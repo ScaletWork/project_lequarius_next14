@@ -1,5 +1,24 @@
 .about-us-main {
+  position: relative;
   padding: 76px res(15, 52);
+
+  .blur-circle {
+    &--1 {
+      top: -100px;
+      left: -100px;
+    }
+
+    &--2 {
+      bottom: 50%;
+      right: -100px;
+    }
+
+    &--3 {
+      bottom: 0;
+      left: -100px;
+      z-index: 0;
+    }
+  }
 
   h2 {
     text-align: center;
@@ -44,10 +63,71 @@
     }
   }
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    h3 {
+      font-size: res(18, 36);
+      letter-spacing: 6px;
+      color: #d73cbe;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: res(20, 42);
+      text-align: left;
+      line-height: 1.5;
+      letter-spacing: 12px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-family: var(--font-interphases);
+      font-size: res(14, 25);
+      line-height: 1.3;
+      color: #fff;
+      max-width: 420px;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: res(18, 22);
+      max-width: 500px;
+      color: #19b3a9;
+      line-height: 1.3;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    &--video {
+      max-width: res(200, 700);
+      margin-right: auto;
+    }
+  }
+
   @include tablet {
     ul {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+    }
+
+    &__wrapper {
+      margin-top: 100px;
+      flex-direction: column-reverse;
+
+      &--video {
+        height: 400px;
+        margin-right: initial;
+        video {
+          height: 100%;
+        }
+      }
     }
   }
 
@@ -60,6 +140,21 @@
     ul {
       grid-template-columns: 1fr;
       gap: 20px;
+    }
+
+    &__wrapper {
+      &--text {
+        width: 100%;
+        text-align: center;
+
+        h2,
+        h4,
+        p {
+          width: 100%;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

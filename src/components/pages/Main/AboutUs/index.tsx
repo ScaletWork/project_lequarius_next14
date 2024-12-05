@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 const aboutInfo = [
   {
@@ -34,8 +36,15 @@ const formatTitleWithBr = (title: string) => {
 };
 
 const AboutUsMain: FC = () => {
+  const [isVideo, setIsVideo] = useState(false);
+
+  useEffect(() => {
+    setIsVideo(true);
+  }, []);
+
   return (
     <section className="about-us-main">
+      <div className="blur-circle blur-circle--1" />
       <h2>Why choose us?</h2>
       <ul>
         {aboutInfo.map((item, i) => (
@@ -53,6 +62,36 @@ const AboutUsMain: FC = () => {
           </li>
         ))}
       </ul>
+      <div className="about-us-main__wrapper">
+        <div className="about-us-main__wrapper--video">
+          {isVideo && (
+            <video
+              src="/animation-video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
+          )}
+        </div>
+        <div className="about-us-main__wrapper--text">
+          <h3>About</h3>
+          <h2>
+            LeQuarius <br /> Technology
+          </h2>
+          <p>
+            Cloud solutions? Mobile applications? Full-stack software systems?
+            We can do it all! At LeQuarius, we create programs specifically
+            tailored to you and your business needs.
+          </p>
+          <h4>
+            Let us manage the small details while you focus on the big picture!
+          </h4>
+        </div>
+      </div>
+      <div className="blur-circle blur-circle--2" />
+      <div className="blur-circle blur-circle--3" />
     </section>
   );
 };
