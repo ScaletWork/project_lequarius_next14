@@ -83,6 +83,11 @@ button {
   color: white;
 }
 
+canvas {
+  width: 100% !important;
+  height: 600px !important;
+}
+
 button,
 fieldset {
   border: 0;

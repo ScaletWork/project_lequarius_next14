@@ -51,12 +51,17 @@ const ServiceMain: FC = () => {
             <h4>UX/UI Design </h4>
             <div className="service-main__details--wrapper">
               <h3>
-                100% Secured <br /> Data
+                From Idea to
+                <br /> User
+                <br /> Experience
               </h3>
               <p>
-                Highlight specific services or products that are unique to your
-                business here. It can be your flagship product, or a service
-                that you&apos;ve pioneered. Give it room to shine here.
+                Our UX/UI design services focus on crafting intuitive, visually
+                simple interfaces tailored to your users and customers. By
+                blending creativity with functionality, we ensure your digital
+                products not only look amazing but also deliver seamless,
+                user-centered experiences that elevate your brand and maximize
+                customer satisfaction
               </p>
               <Link href={"/services"}>Learn More</Link>
             </div>
@@ -72,15 +77,22 @@ const ServiceMain: FC = () => {
             />
           </div>
           <div className="service-main__details--text">
-            <h4>Full stack mobile and web development</h4>
+            <h4>
+              Full stack mobile <br /> and web <br /> development
+            </h4>
             <div className="service-main__details--wrapper">
               <h3>
-                100% Secured <br /> Data
+                End-to-End <br /> Solutions
               </h3>
               <p>
-                Highlight specific services or products that are unique to your
-                business here. It can be your flagship product, or a service
-                that you&apos;ve pioneered. Give it room to shine here.
+                From concept to deployment, we offer comprehensive full-stack
+                development services to bring your digital ideas to life.
+                Specializing in both mobile and web platforms, we deliver
+                scalable, high-performing solutions tailored to your business
+                needs. Whether it&apos;s crafting sleek front-end interfaces or
+                building robust back-end systems, our expertise ensures seamless
+                functionality and exceptional user experiences across all
+                devices
               </p>
               <Link href={"/services"}>Learn More</Link>
             </div>
@@ -96,15 +108,22 @@ const ServiceMain: FC = () => {
             />
           </div>
           <div className="service-main__details--text">
-            <h4>IT Services management and cloud solutions</h4>
+            <h4>
+              IT Services <br /> management and <br /> cloud solutions
+            </h4>
             <div className="service-main__details--wrapper">
               <h3>
                 100% Secured <br /> Data
               </h3>
               <p>
-                Highlight specific services or products that are unique to your
-                business here. It can be your flagship product, or a service
-                that you&apos;ve pioneered. Give it room to shine here.
+                Empower your business with our cutting-edge IT services
+                management, cloud solutions, and robust data security practices.
+                We specialize in streamlining IT operations, optimizing
+                workflows, and delivering scalable cloud strategies to enhance
+                efficiency and reduce costs. With a focus on safeguarding your
+                sensitive information, our secure solutions include advanced
+                encryption, regular audits, and compliance with industry
+                standards.
               </p>
               <Link href={"/services"}>Learn More</Link>
             </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import Blob from "@/components/shared/Animation/Blob";
+import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
@@ -64,16 +66,9 @@ const AboutUsMain: FC = () => {
       </ul>
       <div className="about-us-main__wrapper">
         <div className="about-us-main__wrapper--video">
-          {isVideo && (
-            <video
-              src="/animation-video.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-            />
-          )}
+          <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
+            <Blob />
+          </Canvas>
         </div>
         <div className="about-us-main__wrapper--text">
           <h3>About</h3>
