@@ -147,12 +147,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 300px;
+      width: 100%;
 
       li {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 200px;
+
         height: 40px;
         width: 100%;
         border: 1px solid #fff;

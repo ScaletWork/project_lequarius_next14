@@ -119,6 +119,12 @@
       margin-top: 100px;
       flex-direction: column-reverse;
       gap: 0;
+      &--text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
       canvas {
         height: 200px !important;
       }
