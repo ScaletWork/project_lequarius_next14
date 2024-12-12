@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 const menuItems = [
   {
@@ -27,6 +27,32 @@ const menuItems = [
 ];
 const Header: FC = () => {
   const [isOpen, setOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY <= 0) {
+          setShowHeader(true); // Показывать хедер при самом верху страницы
+        } else if (currentScrollY > lastScrollY) {
+          setShowHeader(false); // Скрывать хедер при скролле вниз
+        } else {
+          setShowHeader(true); // Показывать хедер при скролле вверх
+        }
+
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const onMobileMenuClick = () => {
     if (isOpen) {
@@ -45,7 +71,11 @@ const Header: FC = () => {
   };
 
   return (
-    <header className={`header ${isOpen ? "active" : ""}`}>
+    <header
+      className={`header ${isOpen ? "active" : ""} ${
+        showHeader ? "show" : "hide"
+      }`}
+    >
       <nav>
         <ul>
           {menuItems.map((item, i) => (

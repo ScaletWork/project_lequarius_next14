@@ -7,6 +7,15 @@
   padding-left: res(15, 80);
   padding-right: 15px;
   background: linear-gradient(90deg, #6564ee, #3b2bc2);
+  transition: opacity 0.3s ease-in-out;
+
+  &.hide {
+    opacity: 0;
+  }
+
+  &.show {
+    opacity: 1;
+  }
 
   ul {
     display: flex;
@@ -43,6 +52,7 @@
 
     span {
       font-size: 18px;
+      font-weight: 600;
       cursor: pointer;
     }
   }

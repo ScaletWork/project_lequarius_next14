@@ -76,14 +76,15 @@
       letter-spacing: 6px;
       color: #d73cbe;
       margin-bottom: 8px;
+      font-weight: 600;
     }
 
     h2 {
       font-size: res(20, 42);
       text-align: left;
-      line-height: 1.5;
-      letter-spacing: 12px;
-      margin-bottom: 25px;
+      line-height: 1.3;
+      letter-spacing: 6px;
+      margin-bottom: 50px;
     }
 
     p {
@@ -95,17 +96,18 @@
       margin-bottom: 20px;
     }
 
-    h4 {
-      font-size: res(18, 22);
-      max-width: 500px;
-      color: #19b3a9;
-      line-height: 1.3;
-    }
-
     video {
       width: 100%;
       height: auto;
     }
+  }
+
+  h4 {
+    font-size: res(18, 42);
+    text-align: center;
+    color: #19b3a9;
+    line-height: 1.3;
+    font-weight: 600;
   }
 
   @include tablet {

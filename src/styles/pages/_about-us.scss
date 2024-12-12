@@ -1,0 +1,52 @@
+.about-us-page {
+  position: relative;
+  padding: 140px 80px 240px;
+  overflow: hidden;
+
+  &__list {
+    margin-top: 65px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(150px, 300px));
+    align-items: flex-start;
+    gap: 80px;
+    padding: 0 20px;
+
+    &--first {
+      margin-bottom: 300px;
+    }
+  }
+
+  > img {
+    position: absolute;
+    right: -500px;
+    top: 0;
+    z-index: -1;
+  }
+
+  @include tablet {
+    padding-bottom: 140px;
+    &__list {
+      grid-template-columns: repeat(2, minmax(150px, 300px));
+      &--first {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 80px 15px;
+    &__list {
+      grid-template-columns: 1fr;
+      padding: 0;
+      &--first {
+        margin-bottom: 80px;
+        margin-top: 40px;
+      }
+    }
+
+    > img {
+      display: none;
+    }
+  }
+}

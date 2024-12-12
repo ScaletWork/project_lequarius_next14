@@ -3,7 +3,7 @@
 import Blob from "@/components/shared/Animation/Blob";
 import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 const aboutInfo = [
   {
@@ -38,12 +38,6 @@ const formatTitleWithBr = (title: string) => {
 };
 
 const AboutUsMain: FC = () => {
-  const [isVideo, setIsVideo] = useState(false);
-
-  useEffect(() => {
-    setIsVideo(true);
-  }, []);
-
   return (
     <section className="about-us-main">
       <div className="blur-circle blur-circle--1" />
@@ -80,11 +74,11 @@ const AboutUsMain: FC = () => {
             We can do it all! At LeQuarius, we create programs specifically
             tailored to you and your business needs.
           </p>
-          <h4>
-            Let us manage the small details while you focus on the big picture!
-          </h4>
         </div>
       </div>
+      <h4>
+        Let us manage the small details while you focus on the big picture!
+      </h4>
       <div className="blur-circle blur-circle--2" />
       <div className="blur-circle blur-circle--3" />
     </section>
