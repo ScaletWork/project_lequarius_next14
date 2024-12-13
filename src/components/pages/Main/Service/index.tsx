@@ -8,6 +8,7 @@ const ServiceMain: FC = () => {
       <div className="blur-circle blur-circle--4" />
       <div className="blur-circle blur-circle--5" />
       <div className="blur-circle blur-circle--6" />
+      <div className="blur-circle blur-circle--7" />
       <h2>Services We Provide</h2>
       <p>
         Our comprehensive suite of services is designed to bring your digital

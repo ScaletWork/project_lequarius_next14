@@ -2,6 +2,24 @@
   position: relative;
   padding: 140px 80px 240px;
   overflow: hidden;
+  position: relative;
+
+  .blur-circle {
+    &--8 {
+      top: 0;
+      left: -100px;
+    }
+
+    &--9 {
+      top: 50%;
+      right: -100px;
+    }
+
+    &--10 {
+      bottom: 0;
+      left: -100px;
+    }
+  }
 
   &__list {
     margin-top: 65px;

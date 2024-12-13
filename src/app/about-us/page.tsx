@@ -46,6 +46,9 @@ const AboutUs = () => {
 
   return (
     <section className="about-us-page">
+      <div className="blur-circle blur-circle--8" />
+      <div className="blur-circle blur-circle--9" />
+      <div className="blur-circle blur-circle--10" />
       <Image src="/spiral-pink.png" alt="About Us" width={811} height={1824} />
       <Title
         title="about us"

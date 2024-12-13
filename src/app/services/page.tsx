@@ -33,6 +33,10 @@ const Services = () => {
 
   return (
     <section className="services">
+      <div className="blur-circle blur-circle--11" />
+      <div className="blur-circle blur-circle--12" />
+      <div className="blur-circle blur-circle--13" />
+      <div className="blur-circle blur-circle--14" />
       <Image src="/spiral-green.png" alt="About Us" width={811} height={1824} />
       <Title
         title="services"
@@ -53,8 +57,8 @@ const Services = () => {
           <li>
             <Image
               src="/choose-us/1.png"
-              width={120}
-              height={120}
+              width={160}
+              height={160}
               alt="Services icon"
             />
             <h4>Customized solutions</h4>
@@ -62,8 +66,8 @@ const Services = () => {
           <li>
             <Image
               src="/choose-us/2.png"
-              width={120}
-              height={120}
+              width={160}
+              height={160}
               alt="Services icon"
             />
             <h4>24/7 Support</h4>
@@ -71,8 +75,8 @@ const Services = () => {
           <li>
             <Image
               src="/choose-us/3.png"
-              width={120}
-              height={120}
+              width={160}
+              height={160}
               alt="Services icon"
             />
             <h4>Secure Data</h4>
@@ -80,8 +84,8 @@ const Services = () => {
           <li>
             <Image
               src="/choose-us/4.png"
-              width={120}
-              height={120}
+              width={160}
+              height={160}
               alt="Services icon"
             />
             <h4>On-Time Delivery</h4>

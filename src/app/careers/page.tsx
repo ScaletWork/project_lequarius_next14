@@ -1,3 +1,4 @@
+import CareersComponent from "@/components/pages/Careers";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const Careers = () => {
-  return <div></div>;
+  return <CareersComponent />;
 };
 
 export default Careers;
