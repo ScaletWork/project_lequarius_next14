@@ -1,5 +1,6 @@
 import CloseIconSvg from "@/assets/svg/CloseIcon";
 import MailIconSvg from "@/assets/svg/MailIcon";
+import { scrollAnimation } from "@/utils/constant";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
@@ -45,7 +46,7 @@ const ContactFormBtn: FC = () => {
   };
 
   return (
-    <div className="contact-form-btn">
+    <motion.div {...scrollAnimation} className="contact-form-btn">
       <div className="contact-form-btn__wrapper" onClick={openForm}>
         <div className="contact-form-btn__circle">
           <MailIconSvg />
@@ -176,7 +177,7 @@ const ContactFormBtn: FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

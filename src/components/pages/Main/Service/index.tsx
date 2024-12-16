@@ -1,4 +1,7 @@
-import Image from "next/image";
+"use client";
+
+import { scrollAnimation } from "@/utils/constant";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -9,8 +12,8 @@ const ServiceMain: FC = () => {
       <div className="blur-circle blur-circle--5" />
       <div className="blur-circle blur-circle--6" />
       <div className="blur-circle blur-circle--7" />
-      <h2>Services We Provide</h2>
-      <p>
+      <motion.h2 {...scrollAnimation}>Services We Provide</motion.h2>
+      <motion.p {...scrollAnimation}>
         Our comprehensive suite of services is designed to bring your digital
         vision to life. We specialize in mobile app development, front-end
         design, and back-end architecture, delivering seamless and
@@ -19,29 +22,36 @@ const ServiceMain: FC = () => {
         handle every aspect of your project. Whether you’re a startup or an
         established enterprise, we provide tailored solutions to meet your
         unique needs and drive your success.
-      </p>
+      </motion.p>
       <ul className="service-main__services">
         <li>
-          <h3>UX/UI Design</h3>
-          <a href="#section-1">Learn More</a>
+          <motion.h3 {...scrollAnimation}>UX/UI Design</motion.h3>
+          <motion.a {...scrollAnimation} href="#section-1">
+            Learn More
+          </motion.a>
         </li>
         <li>
-          <h3>
+          <motion.h3 {...scrollAnimation}>
             Full - stack <br /> mobile and <br /> web <br /> development
-          </h3>
-          <a href="#section-2">Learn More</a>
+          </motion.h3>
+          <motion.a {...scrollAnimation} href="#section-2">
+            Learn More
+          </motion.a>
         </li>
         <li>
-          <h3>
+          <motion.h3 {...scrollAnimation}>
             IT Services <br /> management <br /> and cloud <br /> solutions
-          </h3>
-          <a href="#section-3">Learn More</a>
+          </motion.h3>
+          <motion.a {...scrollAnimation} href="#section-3">
+            Learn More
+          </motion.a>
         </li>
       </ul>
       <ul className="service-main__details">
         <li id="section-1">
           <div className="service-main__details--img">
-            <Image
+            <motion.img
+              {...scrollAnimation}
               src={"/services-main/1.png"}
               width={500}
               height={500}
@@ -49,28 +59,29 @@ const ServiceMain: FC = () => {
             />
           </div>
           <div className="service-main__details--text">
-            <h4>UX/UI Design </h4>
+            <motion.h4 {...scrollAnimation}>UX/UI Design </motion.h4>
             <div className="service-main__details--wrapper">
-              <h3>
+              <motion.h3 {...scrollAnimation}>
                 From Idea to
                 <br /> User
                 <br /> Experience
-              </h3>
-              <p>
+              </motion.h3>
+              <motion.p {...scrollAnimation}>
                 Our UX/UI design services focus on crafting intuitive, visually
                 simple interfaces tailored to your users and customers. By
                 blending creativity with functionality, we ensure your digital
                 products not only look amazing but also deliver seamless,
                 user-centered experiences that elevate your brand and maximize
                 customer satisfaction
-              </p>
+              </motion.p>
               <Link href={"/services"}>Learn More</Link>
             </div>
           </div>
         </li>
         <li id="section-2">
           <div className="service-main__details--img">
-            <Image
+            <motion.img
+              {...scrollAnimation}
               src={"/services-main/2.png"}
               width={500}
               height={500}
@@ -78,14 +89,14 @@ const ServiceMain: FC = () => {
             />
           </div>
           <div className="service-main__details--text">
-            <h4>
+            <motion.h4 {...scrollAnimation}>
               Full stack mobile <br /> and web <br /> development
-            </h4>
+            </motion.h4>
             <div className="service-main__details--wrapper">
-              <h3>
+              <motion.h3 {...scrollAnimation}>
                 End-to-End <br /> Solutions
-              </h3>
-              <p>
+              </motion.h3>
+              <motion.p {...scrollAnimation}>
                 From concept to deployment, we offer comprehensive full-stack
                 development services to bring your digital ideas to life.
                 Specializing in both mobile and web platforms, we deliver
@@ -94,14 +105,15 @@ const ServiceMain: FC = () => {
                 building robust back-end systems, our expertise ensures seamless
                 functionality and exceptional user experiences across all
                 devices
-              </p>
+              </motion.p>
               <Link href={"/services"}>Learn More</Link>
             </div>
           </div>
         </li>
         <li id="section-3">
           <div className="service-main__details--img">
-            <Image
+            <motion.img
+              {...scrollAnimation}
               src={"/services-main/3.png"}
               width={500}
               height={500}
@@ -109,14 +121,14 @@ const ServiceMain: FC = () => {
             />
           </div>
           <div className="service-main__details--text">
-            <h4>
+            <motion.h4 {...scrollAnimation}>
               IT Services <br /> management and <br /> cloud solutions
-            </h4>
+            </motion.h4>
             <div className="service-main__details--wrapper">
-              <h3>
+              <motion.h3 {...scrollAnimation}>
                 100% Secured <br /> Data
-              </h3>
-              <p>
+              </motion.h3>
+              <motion.p {...scrollAnimation}>
                 Empower your business with our cutting-edge IT services
                 management, cloud solutions, and robust data security practices.
                 We specialize in streamlining IT operations, optimizing
@@ -125,7 +137,7 @@ const ServiceMain: FC = () => {
                 sensitive information, our secure solutions include advanced
                 encryption, regular audits, and compliance with industry
                 standards.
-              </p>
+              </motion.p>
               <Link href={"/services"}>Learn More</Link>
             </div>
           </div>

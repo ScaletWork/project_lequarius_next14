@@ -29,8 +29,11 @@ body {
   line-height: 1;
   font-weight: 400;
   color: white;
-  background-color: #472cbd;
-  // background-color: #340b5d;
+  background-color: #472cc0;
+
+  &.another-color {
+    background-color: #5033c7;
+  }
 }
 
 body,

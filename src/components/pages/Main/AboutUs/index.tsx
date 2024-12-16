@@ -1,8 +1,9 @@
 "use client";
 
 import Blob from "@/components/shared/Animation/Blob";
+import { scrollAnimation } from "@/utils/constant";
 import { Canvas } from "@react-three/fiber";
-import Image from "next/image";
+import { motion } from "motion/react";
 import { FC } from "react";
 
 const aboutInfo = [
@@ -41,20 +42,23 @@ const AboutUsMain: FC = () => {
   return (
     <section className="about-us-main">
       <div className="blur-circle blur-circle--1" />
-      <h2>Why choose us?</h2>
+      <motion.h2 {...scrollAnimation}>Why choose us?</motion.h2>
       <ul>
         {aboutInfo.map((item, i) => (
           <li key={i}>
             <div className="about-us-main__image">
-              <Image
+              <motion.img
+                {...scrollAnimation}
                 src={item.img}
                 width={290}
                 height={240}
                 alt="About Us icon"
               />
             </div>
-            <h3>{formatTitleWithBr(item.title)}</h3>
-            <p>{item.text}</p>
+            <motion.h3 {...scrollAnimation}>
+              {formatTitleWithBr(item.title)}
+            </motion.h3>
+            <motion.p {...scrollAnimation}>{item.text}</motion.p>
           </li>
         ))}
       </ul>
@@ -65,20 +69,20 @@ const AboutUsMain: FC = () => {
           </Canvas>
         </div>
         <div className="about-us-main__wrapper--text">
-          <h3>About</h3>
-          <h2>
+          <motion.h3 {...scrollAnimation}>About</motion.h3>
+          <motion.h2 {...scrollAnimation}>
             LeQuarius <br /> Technology
-          </h2>
-          <p>
+          </motion.h2>
+          <motion.p {...scrollAnimation}>
             Cloud solutions? Mobile applications? Full-stack software systems?
             We can do it all! At LeQuarius, we create programs specifically
             tailored to you and your business needs.
-          </p>
+          </motion.p>
         </div>
       </div>
-      <h4>
+      <motion.h4>
         Let us manage the small details while you focus on the big picture!
-      </h4>
+      </motion.h4>
       <div className="blur-circle blur-circle--2" />
       <div className="blur-circle blur-circle--3" />
     </section>

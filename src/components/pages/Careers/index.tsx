@@ -4,7 +4,8 @@ import InfoBlock from "@/components/shared/InfoBlock";
 import Title from "@/components/shared/Title";
 import { FC, useEffect, useState } from "react";
 import Image from "next/image";
-import ContactFormBtn from "@/components/shared/ContactFormBtn";
+import { motion } from "motion/react";
+import { scrollAnimation } from "@/utils/constant";
 
 const CareersComponent: FC = () => {
   const [isVideo, setIsVideo] = useState(false);
@@ -39,7 +40,7 @@ const CareersComponent: FC = () => {
           title="CAREERS"
           text="At LeQuarius we value innovation, collaboration, and delivering exceptional IT solutions. Join a team where your ideas matter and your growth is supported."
         />
-        <p>Why LeQuarius?</p>
+        <motion.p {...scrollAnimation}>Why LeQuarius?</motion.p>
         <ul className="careers__main--list">
           {infoBlocks.map((item, i) => (
             <li key={i}>
@@ -49,32 +50,39 @@ const CareersComponent: FC = () => {
         </ul>
       </div>
       <div className="careers__contact">
-        <h4>
+        <motion.h4 {...scrollAnimation}>
           Take the next step in your career—join Lequariua! Explore our job
           openings and apply today. Have questions? Reach out to our HR team at
           lequarius@lequarius.com{" "}
-        </h4>
+        </motion.h4>
         <div className="careers__contact--text">
-          <p>
+          <motion.p {...scrollAnimation}>
             At Lequarius, we are constantly on the lookout for fresh talent and
-            driven individuals to join our growing team. If you're passionate
-            about innovation and eager to make an impact, we’d love to hear from
-            you—email your CV and cover letter to lequarius@lequarius.com to
-            explore opportunities with us!
-          </p>
-          <Image src="/icons/14.png" alt="Icon" width={120} height={120} />
-        </div>
-        {/* <ContactFormBtn /> */}
-        {/* {isVideo && (
-          <video
-            src="/comming-soon.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
+            driven individuals to join our growing team. If you&apos;re
+            passionate about innovation and eager to make an impact, we’d love
+            to hear from you—email your CV and cover letter to
+            lequarius@lequarius.com to explore opportunities with us!
+          </motion.p>
+          <motion.img
+            {...scrollAnimation}
+            src="/icons/14.png"
+            alt="Icon"
+            width={120}
+            height={120}
           />
-        )} */}
+        </div>
+        <div className="careers__contact--video">
+          {isVideo && (
+            <video
+              src="/careers_video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+            />
+          )}
+        </div>
       </div>
     </section>
   );

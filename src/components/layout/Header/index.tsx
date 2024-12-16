@@ -1,5 +1,7 @@
 "use client";
 
+import { scrollAnimation } from "@/utils/constant";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 
@@ -79,26 +81,27 @@ const Header: FC = () => {
       <nav>
         <ul>
           {menuItems.map((item, i) => (
-            <li key={i}>
+            <motion.li key={i} {...scrollAnimation}>
               <Link href={item.href} onClick={onMenuClick}>
                 {item.name}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
-        <div className="header__language">
+        <motion.div className="header__language" {...scrollAnimation}>
           <span className="active">ENG</span>
           <span>PLN</span>
-        </div>
+        </motion.div>
       </nav>
-      <div
+      <motion.div
+        {...scrollAnimation}
         className={`header__hamburger ${isOpen ? "active" : ""}`}
         onClick={onMobileMenuClick}
       >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </motion.div>
       {/* Костыль чтоб хедер не скакал при открывании моб меню */}
       <div
         className={`header__hamburger-rock ${isOpen ? "active" : ""}`}
