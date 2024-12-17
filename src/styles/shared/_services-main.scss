@@ -38,11 +38,13 @@
     line-height: 1.8;
     font-family: var(--font-interphases);
     padding: 0 res(15, 190);
+    color: rgba(255, 255, 255, 0.7);
   }
 
   &__services {
     display: grid;
     grid-template-columns: repeat(3, minmax(120px, 310px));
+    justify-content: center;
     padding: 0 res(15, 190);
     padding-bottom: 50px;
     margin-top: 35px;
@@ -143,6 +145,7 @@
       font-size: res(16, 22);
       line-height: 1.7;
       margin-bottom: 40px;
+      color: rgba(255, 255, 255, 0.7);
     }
 
     a {

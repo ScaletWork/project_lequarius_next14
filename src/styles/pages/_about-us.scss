@@ -22,13 +22,13 @@
   }
 
   &__list {
+    margin: 0 auto;
     margin-top: 65px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, minmax(150px, 300px));
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
     align-items: flex-start;
     gap: 80px;
-    padding: 0 20px;
 
     &--first {
       margin-bottom: 300px;
@@ -37,7 +37,7 @@
 
   > img {
     position: absolute;
-    right: -500px;
+    right: -400px;
     top: 0;
     z-index: -1;
   }
@@ -45,7 +45,7 @@
   @include tablet {
     padding-bottom: 140px;
     &__list {
-      grid-template-columns: repeat(2, minmax(150px, 300px));
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
       &--first {
         margin-bottom: 100px;
       }

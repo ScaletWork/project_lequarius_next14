@@ -37,7 +37,7 @@ const ServicesComponent: FC = () => {
       <div className="blur-circle blur-circle--12" />
       <div className="blur-circle blur-circle--13" />
       <div className="blur-circle blur-circle--14" />
-      <Image src="/spiral-green.png" alt="About Us" width={811} height={1824} />
+      <Image src="/spiral-green.png" alt="About Us" width={837} height={1824} />
       <Title
         title="services"
         text="we offer a wide range of IT services, From custom development to cloud solutions, our team of experienced software developers, project managers, and user experience experts is dedicated to delivering IT solutions tailored to meet your business needs "

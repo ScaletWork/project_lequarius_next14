@@ -34,7 +34,7 @@ const CareersComponent: FC = () => {
 
   return (
     <section className="careers">
-      <Image src="/spiral-red.png" alt="Careers" width={875} height={1855} />
+      <Image src="/spiral-red.png" alt="Careers" width={837} height={1824} />
       <div className="careers__main">
         <Title
           title="CAREERS"

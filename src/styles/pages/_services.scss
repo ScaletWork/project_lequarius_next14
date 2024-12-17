@@ -1,6 +1,6 @@
 .services {
   position: relative;
-  padding: 140px 20px 100px;
+  padding: 140px 80px 100px;
   overflow: hidden;
 
   .blur-circle {
@@ -24,10 +24,6 @@
     }
   }
 
-  .title {
-    max-width: 1440px;
-  }
-
   > img {
     position: absolute;
     right: -400px;
@@ -36,7 +32,6 @@
   }
 
   > p {
-    max-width: 1440px;
     margin: 0 auto;
     margin-top: 20px;
     font-size: res(16, 24);
@@ -48,10 +43,9 @@
     margin-top: 65px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, minmax(100px, 300px));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
     align-items: flex-start;
     gap: 60px;
-    padding: 0 20px;
 
     &--first {
       margin-bottom: 300px;
@@ -106,7 +100,7 @@
 
   @media screen and (max-width: 1400px) {
     &__list {
-      grid-template-columns: repeat(3, minmax(100px, 300px));
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
     }
   }
 
@@ -114,7 +108,7 @@
     padding-bottom: 80px;
 
     &__list {
-      grid-template-columns: repeat(2, minmax(100px, 300px));
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
 
     &__about {
